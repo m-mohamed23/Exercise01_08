@@ -10,10 +10,16 @@ public class PerfectSquare {
 	
 	public static boolean isPerfectSquare(int num) {
         for(int i = 1; i < num; i++) {
-        	if(i*i = num) 
-        		return true;
-        	else if (i*i > num) return false;
+          // This should a double "=" for comparison operator
+          // The curly braces were also missing so I added them to identify the scope for each of the conditionals.
+        	if(i*i == num) {
+            return true;
+          } 
+        	else if (i*i > num) {
+            return false;
+          }
         }
+      // Since this function returns a boolean, "false" should be the default value.
+      return false;
     }
-
 }
